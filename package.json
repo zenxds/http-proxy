@@ -1,0 +1,19 @@
+{
+  "name": "http-proxy",
+  "version": "0.1.0",
+  "description": "http proxy",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:docker": "docker build . -t zenxds/http-proxy",
+    "start:docker": "pm2-docker ecosystem.config.js --env production",
+    "test": "ava"
+  },
+  "author": "zenxds",
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^2.10.4"
+  }
+}
